@@ -1,0 +1,14 @@
+
+<h2>My Heroes</h2>
+<app-hero *ngFor="let hero of heroes" [hero]="hero"  (selectedOne)="onSelected($event)"></app-hero>
+<!-- <app-detail></app-detail> -->
+
+<div>
+    <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+      Add hero
+    </button>
+  </div>
