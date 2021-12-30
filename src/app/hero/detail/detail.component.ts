@@ -38,4 +38,11 @@ export class DetailComponent implements OnInit {
     }
   }
 
+  delete(data: Hero): void{
+    if (data) {
+      this.heroService.deleteHero(data)
+        .subscribe(() => this.goBack());
+    }
+  }
+
 }

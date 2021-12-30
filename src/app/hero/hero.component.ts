@@ -19,12 +19,6 @@ export class HeroComponent implements OnInit {
       this.selectedOne.emit(data);
   }
 
-  delete(data: Hero): void{
-    if (data) {
-      this.heroService.deleteHero(data)
-        .subscribe();
-    }
-  }
 
   
 }
